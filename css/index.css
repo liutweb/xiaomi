@@ -1,0 +1,664 @@
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.w {
+    width: 1225px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 给所有li盒子加上经过的阴影 */
+
+.w ul li {
+    transition: all 0.3s;
+}
+
+.w ul li:hover {
+    box-shadow: 2px 2px 4px 2px rgba(66, 47, 47, 0.2);
+}
+
+.header {
+    height: 40px;
+    background-color: #333333;
+    line-height: 40px;
+    color: #b0b0b0;
+    margin-bottom: 22px;
+}
+
+.nav {
+    overflow: hidden;
+    height: 40px;
+    /* background-color: skyblue; */
+}
+
+
+/* 头部左边 */
+
+.header .fl ul li {
+    float: left;
+}
+
+.header .fl ul li a {
+    color: #b0b0b0;
+    padding: 0em 7px;
+}
+
+.nav ul li i {
+    color: #3a3f3f;
+}
+
+.header .fl ul li:first-child a {
+    padding-left: 0;
+}
+
+
+/* 头部左边结束 */
+
+
+/* 头部右边开始 */
+
+.header .fr ul li {
+    float: left;
+}
+
+.header .fr ul li a {
+    padding: 0 11px;
+    color: #b0b0b0;
+}
+
+.header .fr ul li:last-child {
+    overflow: hidden;
+    text-align: center;
+    width: 120px;
+    background-color: #424242;
+}
+
+.header .fr ul li:last-child::before {
+    content: "\e746";
+    font-family: "iconfont";
+    font-size: 28px;
+    vertical-align: top;
+}
+
+.header a:hover {
+    color: #fff;
+}
+
+
+/* 头部右边结束 */
+
+
+/* logo大盒子部分 */
+
+.navbox {
+    position: relative;
+    height: 55px;
+    margin-bottom: 23px;
+}
+
+.logo {
+    display: block;
+    float: left;
+    width: 55px;
+    height: 55px;
+    overflow: hidden;
+    background-color: #ff6700;
+    text-align: left;
+    text-indent: -9999em;
+}
+
+
+/* mi logo的样式 */
+
+.logo::before {
+    /* 定位 */
+    position: absolute;
+    /* 伪元素必须要设置content属性 */
+    content: '';
+    /* 左偏移 */
+    left: 0;
+    /* 上偏移 */
+    top: 0;
+    width: 55px;
+    height: 55px;
+    /* 设置过渡 */
+    transition: all .3s;
+    /* 背景图片 */
+    background: url(../需要的图片/images/mi-logo.png) no-repeat center center;
+    /* 透明度 */
+    opacity: 1;
+}
+
+
+/* mi home 的样式 */
+
+.logo::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 55px;
+    height: 55px;
+    transition: all .3s;
+    background: url(../需要的图片/images/mi-home.png) no-repeat center center;
+    margin-left: -55px;
+    opacity: 0;
+}
+
+
+/* 鼠标移入 让mi logo 往右侧进行滑动 */
+
+.logo:hover::before {
+    opacity: 0;
+    margin-left: 55px;
+}
+
+
+/* 鼠标移入 让mi home 回到盒子中间 */
+
+.logo:hover::after {
+    opacity: 1;
+    margin-left: 0;
+}
+
+.tab-list {
+    float: left;
+    width: 640px;
+    margin-left: 190px;
+}
+
+.tab-list a {
+    font-size: 16px;
+    padding-left: 17px;
+    line-height: 55px;
+}
+
+.search {
+    width: 243px;
+    height: 48px;
+    /* background-color: red; */
+    border: 1px solid #e0e0e0;
+}
+
+.btn {
+    width: 50px;
+    height: 48px;
+    font-family: "iconfont";
+    font-size: 24px;
+    border: 1px solid #e0e0e0;
+}
+
+
+/* banner  */
+
+.banner {
+    position: relative;
+    height: 460px;
+    background: url(../需要的图片/小米笔记本.jpg);
+}
+
+.dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 234px;
+    height: 460px;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.3)
+}
+
+.dropdown a {
+    position: relative;
+    display: block;
+    padding: 0 30px;
+    color: #fff;
+    font-size: 14px;
+    height: 43px;
+    line-height: 43px;
+}
+
+.dropdown a::after {
+    content: "\e615";
+    position: absolute;
+    right: 30px;
+    font-family: "iconfont" !important;
+}
+
+.dropdown a:hover {
+    background-color: #ff6700;
+}
+
+.banner .zuo,
+.banner .you {
+    position: absolute;
+    top: 50%;
+    margin-top: -47px;
+    width: 54px;
+    height: 95px;
+    font-size: 40px;
+    color: #fff;
+    line-height: 95px;
+    text-align: center;
+}
+
+.banner .zuo {
+    left: 234px;
+}
+
+.banner .you {
+    right: 0;
+}
+
+.banner .zuo:hover,
+.banner .you:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.dian {
+    position: absolute;
+    top: 430px;
+    right: 100px;
+}
+
+.dian li {
+    float: left;
+    margin-left: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #333333;
+}
+
+.dian li:hover {
+    background-color: rgb(136, 129, 129);
+}
+
+
+/* banner部分结束 */
+
+
+/* 推荐部分开始 */
+
+.tuijian {
+    margin-top: 14px;
+    margin-bottom: 45px;
+}
+
+.tuijian span {
+    float: left;
+    width: 234px;
+    height: 170px;
+    background-color: #5f5750;
+}
+
+.tuijian span a {
+    display: block;
+    float: left;
+    width: 78px;
+    height: 84px;
+    text-align: center;
+    color: #cdcac8;
+    border-right: 1px solid #cdcac8;
+    border-bottom: 1px solid #cdcac8;
+}
+
+.tuijian span a i {
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin: 15px auto 5px;
+}
+
+
+/* .tuijian span a:nth-child(3n) {
+    border-right: 0; 
+} */
+
+.tuijian span a .shouji {
+    background: url(../需要的图片/sq.png) no-repeat 0 0;
+}
+
+.tuijian span a .qiye {
+    background: url(../需要的图片/sq.png) no-repeat 0 -37px;
+}
+
+.tuijian span a .tongdao {
+    background: url(../需要的图片/sq.png) no-repeat 0 -74px;
+}
+
+.tuijian span a .ka {
+    background: url(../需要的图片/sq.png) no-repeat 0 -74px;
+}
+
+.tuijian span a .new {
+    background: url(../需要的图片/sq.png) no-repeat 0 0;
+}
+
+.tuijian span a .chongzhi {
+    background: url(../需要的图片/sq.png) no-repeat 0 -111px;
+}
+
+.tuijian ul li {
+    float: left;
+    margin-left: 14px;
+    width: 316px;
+    height: 170px;
+    background-color: #fafa;
+}
+
+.tuijian ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 推荐部分结束 */
+
+
+/* 楼层部分 */
+
+
+/* 一楼 */
+
+.yilou header {
+    height: 42px;
+    /* background-color: yellowgreen; */
+}
+
+.yilou header h4 {
+    float: left;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.yilou header span {
+    margin-top: 11px;
+    margin-left: -1px;
+    width: 34px;
+    height: 22px;
+    text-align: center;
+    font-weight: 700;
+    color: #e3e5e8;
+    border: 1px solid #e0e0e0;
+}
+
+.yilou header span:hover {
+    color: #333131;
+}
+
+
+/* body部分 */
+
+.tuijian-body ul li {
+    float: left;
+    margin-left: 17px;
+    width: 231px;
+    height: 340px;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.tuijian-body ul li:nth-child(5n+1) {
+    margin-left: 0;
+}
+
+.tuijian-body ul li .tupian {
+    display: block;
+    height: 230px;
+}
+
+.tuijian-body ul li a {
+    display: block;
+    font-size: 16px;
+    height: 24px;
+}
+
+.tuijian-body ul li p {
+    margin-top: 8px;
+    margin-bottom: 30px;
+    text-indent: 0;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+
+.tuijian-body ul li strong {
+    color: #fe6709;
+}
+
+
+/* 二楼家电  */
+
+.jiadian {
+    margin-top: 50px;
+    background-color: #f5f5f5;
+}
+
+.jiadian header {
+    height: 42px;
+    margin-bottom: 16px;
+}
+
+.jiadian h4 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.jiadian .fr a:first-child {
+    border-bottom: 2px solid #ff6700;
+    color: #ff6700;
+}
+
+.jiadian .fr a {
+    float: left;
+    display: block;
+    margin: 0 16px;
+    margin-top: 20px;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.jiadian .fr a:hover {
+    color: #ff6700;
+    border-bottom: 2px solid #ff6700;
+}
+
+.air {
+    display: block;
+    width: 234px;
+    height: 615px;
+}
+
+.body-fl {
+    width: 991px;
+    height: 615px;
+}
+
+.jiadian-body ul li {
+    float: left;
+    position: relative;
+    margin-left: 14px;
+    margin-bottom: 14px;
+    height: 300px;
+    width: 233px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.jiadian-body ul li:nth-child(n+5) {
+    margin-bottom: 0;
+}
+
+.jiadian-body ul li .tupian {
+    display: block;
+    height: 210px;
+}
+
+.jiadian-body ul li .tupian img {
+    width: 100%;
+}
+
+.jiadian-body ul li .name {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+}
+
+.jiadian-body ul li span {
+    display: block;
+    margin-top: 20px;
+    color: #ff6700;
+}
+
+.jiadian-body ul li:nth-child(3n)::before {
+    content: "新品";
+    position: absolute;
+    top: 0;
+    left: 90px;
+    width: 64px;
+    height: 20px;
+    color: #fff;
+    background-color: #83c44e;
+}
+
+.jiadian-body ul li:nth-child(5)::before,
+.jiadian-body ul li:nth-child(7)::before {
+    content: "享95折";
+    position: absolute;
+    top: 0;
+    left: 90px;
+    width: 64px;
+    height: 20px;
+    color: #fff;
+    background-color: #e53935;
+}
+
+
+/* 最后一个盒子 */
+
+.last {
+    float: left;
+    width: 233px;
+    height: 300px;
+    margin-left: 14px;
+}
+
+.top,
+.bottom {
+    height: 143px;
+    background-color: #fff;
+}
+
+.top {
+    margin-bottom: 14px;
+}
+
+.top>.fr {
+    display: block;
+    width: 117px;
+    height: 143px;
+}
+
+.top>.fl {
+    width: 116px;
+    height: 143px;
+}
+
+.top>.fl {
+    text-align: center;
+}
+
+.last .top>.fl i {
+    display: inline-block;
+    margin-top: 40px;
+}
+
+.last .top>.fl span {
+    display: block;
+    margin-top: 10px;
+    color: #ff6700;
+}
+
+.bottom {
+    position: relative;
+    text-align: left;
+}
+
+.bottom .more {
+    display: block;
+    margin-left: 20px;
+    padding-top: 50px;
+    font-size: 16px;
+}
+
+.bottom em {
+    display: block;
+    margin-left: 20px;
+}
+
+.bottom::after {
+    content: "\e619";
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    font-size: 62px;
+    color: #ff6700;
+}
+
+
+/* 二楼结束 */
+
+
+/* 底部开始 */
+
+.footer {
+    margin-top: 50px;
+    padding-top: 30px;
+    /* background-color: skyblue; */
+}
+
+.foot-top {
+    height: 56px;
+    /* background-color: yellowgreen; */
+}
+
+.top-fl {
+    width: 785px;
+}
+
+.footer-logo {
+    display: block;
+}
+
+.div {
+    font-size: 12px;
+}
+
+.top-fl p {
+    font-size: 12px;
+    color: #b0b0b0;
+}
+
+.top-fr>a {
+    display: inline-block;
+    margin-left: 25px;
+    width: 85px;
+    height: 26px;
+}
+
+.footer-banner>p {
+    margin-top: 40px;
+    font-size: 18px;
+    text-align: center;
+    color: #b0b0b0;
+}
